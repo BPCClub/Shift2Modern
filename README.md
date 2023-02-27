@@ -1,3 +1,3 @@
 # BPCC Guide
 
-Check out the <https://guide.bpcc.club> for more information.
+Check out the <https://shift2modern.dev> for more information.
