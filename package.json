@@ -1,6 +1,6 @@
 {
-  "name": "docus-starter",
-  "version": "0.1.0",
+  "name": "shift2modern",
+  "version": "230302",
   "private": true,
   "scripts": {
     "dev": "nuxi dev",

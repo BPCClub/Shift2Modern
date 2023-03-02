@@ -1,9 +1,11 @@
 ---
 title: VSCode 逐步安装指南
 description: VSCode Installer 逐步解析
+aside: false
+navigation: false
 ---
 
-# VSCode Install 逐步安装指南
+# VSCode Installer 逐步安装指南
 
 ::alert{type="info"}
 以 *Windows* 下的 *User Installer* 为例
@@ -11,21 +13,21 @@ description: VSCode Installer 逐步解析
 
 ## 用户协议
 
-![](/img/2/1/1.png)
+![](/img/3/99/1.png)
 
 点击 `I accept the agreement` 然后 `Next >` 即可。
 
 
 ## 安装目录
 
-![](/img/2/1/2.png)
+![](/img/3/99/2.png)
 
 选择想要 *VSCode* 安装的目录，无特殊要求默认即可。
 
 
 ## 开始菜单条目
 
-![](/img/2/1/3.png)
+![](/img/3/99/3.png)
 
 此项决定 *VSCode* 在 *开始菜单* 中的程序名。
 
@@ -34,7 +36,7 @@ description: VSCode Installer 逐步解析
 
 ## 额外选项
 
-![](/img/2/1/4.png)
+![](/img/3/99/4.png)
 
 | **选项** |       |
 | ----- | ----- |
@@ -47,9 +49,9 @@ description: VSCode Installer 逐步解析
 
 ## 确认配置
 
-![](/img/2/1/5.png)
+![](/img/3/99/5.png)
 
 
 ## 安装完成
 
-![](/img/2/1/6.png)
+![](/img/3/99/6.png)

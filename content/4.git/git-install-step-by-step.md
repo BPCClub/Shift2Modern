@@ -1,6 +1,8 @@
 ---
 title: Git 逐步安装指南
 description: Git Installer 逐步解析
+aside: false
+navigation: false
 ---
 
 # GIt 逐步安装指南
@@ -14,32 +16,32 @@ description: Git Installer 逐步解析
 
 ## 用户协议
 
-![](/img/3/1/1.png)
+![](/img/4/99/1.png)
 
 点击 `Next` 即可进入下一步。
 
 
 ## 选择组件
 
-![](/img/3/1/2.png)
+![](/img/4/99/2.png)
 
-| 选项 |       | 建议与否 |
-| ----- | ----- | ----- |
-| Additional icons | 在资源管理器中显示的图标 | - |
-| On the Desktop | 在桌面上创建快捷方式 | - |
-| Windows Explorer integration | 在资源管理器集成 | - |
-| Git Bash Here | 在资源管理器中右键菜单添加 “在此处打开 Git Bash” | - |
-| Git GUI Here | 在资源管理器中右键菜单添加 “在此处打开 Git GUI” | - |
-| Git LFS (Large File Support) | Git Large File Storage | 是 |
-| Associate .git* configuration files with the default text editor | 与默认文本编辑器关联 .git* 配置文件 | 是 |
-| Associate .sh files to be run with Bash | 与 *Bash* 关联 .sh 文件 | 否 |
-| Check daily for Git for Windows updates | 每天检查 *Git for Windows* 更新 | - |
-| (NEW!) Add a Git Bash Profile to Windows Terminal | 在 Windows Terminal 中添加 *Git Bash* 配置文件 | - |
-| (NEW!) Scalar (Git add-on to manage large-scale repositories) | 启用 Scalar （用于管理大规模库的 *Git* 插件） | 是 |
+| 选项                                                             |                                                  | 建议与否 |
+| ---------------------------------------------------------------- | ------------------------------------------------ | -------- |
+| Additional icons                                                 | 在资源管理器中显示的图标                         | -        |
+| On the Desktop                                                   | 在桌面上创建快捷方式                             | -        |
+| Windows Explorer integration                                     | 在资源管理器集成                                 | -        |
+| Git Bash Here                                                    | 在资源管理器中右键菜单添加 “在此处打开 Git Bash” | -        |
+| Git GUI Here                                                     | 在资源管理器中右键菜单添加 “在此处打开 Git GUI”  | -        |
+| Git LFS (Large File Support)                                     | Git Large File Storage                           | 是       |
+| Associate .git* configuration files with the default text editor | 与默认文本编辑器关联 .git* 配置文件              | 是       |
+| Associate .sh files to be run with Bash                          | 与 *Bash* 关联 .sh 文件                          | 否       |
+| Check daily for Git for Windows updates                          | 每天检查 *Git for Windows* 更新                  | -        |
+| (NEW!) Add a Git Bash Profile to Windows Terminal                | 在 Windows Terminal 中添加 *Git Bash* 配置文件   | -        |
+| (NEW!) Scalar (Git add-on to manage large-scale repositories)    | 启用 Scalar （用于管理大规模库的 *Git* 插件）    | 是       |
 
 ## 注册默认编辑器
 
-![](/img/3/1/3.png)
+![](/img/4/99/3.png)
 
 ::alert{type="info"}
 如按照本指南安装 *VSCode*，则此处应选择 `Use Visual Studio Code as Git's default editor`
@@ -52,7 +54,7 @@ description: Git Installer 逐步解析
 
 ## 调整初始化新库时的初始分支名
 
-![](/img/3/1/4.png)
+![](/img/4/99/4.png)
 
 ::alert{type="info"}
 *GitHub* 默认的初始分支名为 `main`，而 *Git* 默认的初始分支名为 `master`。
@@ -62,7 +64,7 @@ description: Git Installer 逐步解析
 
 ## 调整系统环境变量
 
-![](/img/3/1/5.png)
+![](/img/4/99/5.png)
 
 控制 *Git* 在系统环境变量中的配置。
 
@@ -71,7 +73,7 @@ description: Git Installer 逐步解析
 
 ## 选择SSH可执行文件
 
-![](/img/3/1/6.png)
+![](/img/4/99/6.png)
 
 ::alert{type="info"}
 *Windows* 自带了 *OpenSSH* 客户端，同时 *Git* 也自带了 *OpenSSH* 客户端。 :br
@@ -81,14 +83,14 @@ description: Git Installer 逐步解析
 
 ## 选择 HTTPS 传输后端
 
-![](/img/3/1/7.png)
+![](/img/4/99/7.png)
 
 默认即可。
 
 
 ## 配置换行符转换
 
-![](/img/3/1/8.png)
+![](/img/4/99/8.png)
 
 ::callout
 #summary
@@ -112,35 +114,35 @@ IMPORTANT: You must submit files in the CVS directory with Unix/Linux file endin
 
 ## 配饰 *Git Bash* 的终端模拟器
 
-![](/img/3/1/9.png)
+![](/img/4/99/9.png)
 
 默认即可。
 
 
 ## 选择 `git pull` 命令的默认行为
 
-![](/img/3/1/10.png)
+![](/img/4/99/10.png)
 
 默认即可，`git pull` 指令将在 [*Git* 参照](2.git-reference.md) 中详细讲解。
 
 
 ## 选择凭证管理器
 
-![](/img/3/1/11.png)
+![](/img/4/99/11.png)
 
 默认即可。
 
 
 ## 配置额外选项
 
-![](/img/3/1/12.png)
+![](/img/4/99/12.png)
 
 默认即可。
 
 
 ## 配置实验性选项
 
-![](/img/3/1/13.png)
+![](/img/4/99/13.png)
 
 ::alert{type="warning"}
 这些项目可能会频繁变更，生成环境不建议使用。
@@ -150,6 +152,6 @@ IMPORTANT: You must submit files in the CVS directory with Unix/Linux file endin
 
 ## 完成安装
 
-![](/img/3/1/14.png)
+![](/img/4/99/14.png)
 
 取消勾选然后点击 `Finish` 即可完成安装。
