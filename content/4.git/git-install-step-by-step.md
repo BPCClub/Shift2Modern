@@ -10,7 +10,7 @@ navigation: false
 ::alert{type="info"}
 以 *Windows* 下的 *User Installer* 为例 :br
 :br
-本文撰写之日最先的 *Git* 版本为 :badge[2.39.2]{type="warning"}
+本文撰写之日最新的 *Git* 版本为 :badge[2.39.2]{type="warning"}
 ::
 
 
@@ -97,7 +97,7 @@ navigation: false
 *DOS* 系统与 *UNIX* 系统使用的换行符不同。
 
 #content
-[source](https://www.cs.toronto.edu/~krueger/csc209h/winter/lectures/lec-02.html)
+https://www.cs.toronto.edu/~krueger/csc209h/winter/lectures/lec-02.html
 
 DOS vs. Unix Line Endings
 Text files created on DOS/Windows machines have different line endings than files created on Unix/Linux. DOS uses carriage return and line feed ("\r\n") as a line ending, which Unix uses just line feed ("\n"). You need to be careful about transferring files between Windows machines and Unix machines to make sure the line endings are translated properly.
@@ -112,7 +112,7 @@ IMPORTANT: You must submit files in the CVS directory with Unix/Linux file endin
 保持默认即可。
 
 
-## 配饰 *Git Bash* 的终端模拟器
+## 配置 *Git Bash* 的终端模拟器
 
 ![](/img/4/99/9.png)
 
