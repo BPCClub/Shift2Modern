@@ -1,6 +1,6 @@
 {
   "name": "shift2modern",
-  "version": "230307",
+  "version": "230309",
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
@@ -9,7 +9,7 @@
     "preview": "nuxi preview"
   },
   "devDependencies": {
-    "@nuxt-themes/docus": "^1.9.1",
+    "@nuxt-themes/docus": "^1.9.6",
     "nuxt": "^3.2.3"
   }
 }
