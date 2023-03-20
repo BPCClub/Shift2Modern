@@ -29,7 +29,7 @@ Work in progress
 *FastGithub* 使用教程请参考 [GitHub国内加速：利用FastGithub开源软件优化访问](https://51.ruyo.net/18275.html)
 ::
 
-## 开始注册
+## 创建账户
 
 访问 [**GitHub**](https://github.com) ，点击右上角的 **Sign up** 按钮。
 
@@ -51,3 +51,20 @@ Work in progress
 ![](/img/7/99/github-sign-up-page-3.png)
 
 然后是设置用户名。如用户名被占用，会在下方提示 `Username ‘xxx’ is unavailable`。
+
+![](/img/7/99/github-sign-up-page-4.png)
+
+此处是选择是否接受 *Github* 的广告邮件，输入 `y` 接受，输入 `n` 不接受。
+
+![](/img/7/99/github-sign-up-page-5.png)
+
+然后是人机验证，根据具体情况完成验证。
+之后点击 `Create account` 按钮完成账户注册。
+
+## 验证邮箱
+
+账户注册完成后，您的邮箱中会收到一封来自 *GitHub* 的验证邮件，根据邮件中的提示完成验证。
+
+------------------------------------------------------------------------------
+
+到此为止，您已经成功注册了一个 *GitHub* 账号。
