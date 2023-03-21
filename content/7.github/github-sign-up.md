@@ -5,11 +5,7 @@ aside: false
 navigation: false
 ---
 
-::alert{type="danger"}
-Work in progress
-::
-
-# GitHub 注册教程（WIP）
+# GitHub 注册教程
 
 ## 准备工作
 ::list{type="primary"}
