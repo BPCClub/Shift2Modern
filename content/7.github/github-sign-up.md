@@ -1,7 +1,6 @@
 ---
 title: GitHub 注册教程
 description: GitHub 账号注册逐步指南
-aside: false
 navigation: false
 ---
 
@@ -18,7 +17,7 @@ navigation: false
 
 ::callout{type="info"}
 #summary
-我们推荐使用 [*Steam++*](https://steampp.net/) 或 [*FastGithub*](https://github.com/dotnetcore/FastGithub) 等反代加速工具，确保能够正常访问 *GitHub*。
+推荐使用 [*Steam++*](https://steampp.net/) 或 [*FastGithub*](https://github.com/dotnetcore/FastGithub) 等反代加速工具，确保能够正常访问 *GitHub*。
 
 #content
 *Steam++* 使用教程请参考 [GitHub国内加速：利用 Watt Toolkit（原Steam++）优化访问](https://51.ruyo.net/18018.html) :br
