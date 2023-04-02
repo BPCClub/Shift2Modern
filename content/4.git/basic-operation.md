@@ -1,6 +1,7 @@
 ---
 title: 基础操作
 description: Git 基础操作
+navigation: false
 ---
 
 # *Git* 基本操作
