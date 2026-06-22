@@ -6,7 +6,7 @@ navigation: false
 
 # *Git* 基本操作
 
-::alert{type="info"}
+::callout{color="info"}
 此篇只介绍单人本地进行基础的版本控制，多人协作，多分支等操作指南仍在制作中。
 ::
 
@@ -14,7 +14,9 @@ navigation: false
 
 初始化新仓库：
 
-:terminal{content="git init [repository name]"}
+```bash
+git init [repository name]
+```
 
 此命令会在当前目录下创建一个名为 `[repository name]` 的文件夹，并在其中创建一个 `.git` 文件夹，用于存放 *Git* 的版本控制数据。
 
@@ -25,11 +27,13 @@ navigation: false
 
 添加文件到暂存区：
 
-:terminal{content="git add [file name]"}
+```bash
+git add [file name]
+```
 
 此命令会将当前目录下的 `[file name]` 文件添加到 *Git* 的暂存区。
 
-::alert{type="info"}
+::callout{color="info"}
 也可以使用 `git add .` 将当前目录下的所有文件添加到暂存区。
 ::
 
@@ -38,11 +42,13 @@ navigation: false
 
 删除文件：
 
-:terminal{content="git rm [file name]"}
+```bash
+git rm [file name]
+```
 
 此命令会将当前目录下的 `[file name]` 文件从 *Git* 的暂存区中删除。
 
-::alert{type="info"}
+::callout{color="info"}
 -  `git rm -f [file name]` 可以强制删除文件。
 -  `git rm -r [directory name]` 可以删除目录及其子目录下的所有文件。
 ::
@@ -52,11 +58,13 @@ navigation: false
 
 撤销修改：
 
-:terminal{content="git checkout -- [file name]"}
+```bash
+git checkout -- [file name]
+```
 
 此命令会将当前 *Git* 仓库中的 `[file name]` 文件恢复到上一次提交的状态。
 
-::alert{type="warning"}
+::callout{color="warning"}
 此命令会将当前 *Git* 仓库中的 `[file name]` 文件恢复到上一次提交的状态，且无法恢复。
 ::
 
@@ -65,11 +73,13 @@ navigation: false
 
 提交文件到本地仓库：
 
-:terminal{content="git commit -m [commit message]"}
+```bash
+git commit -m [commit message]
+```
 
 此命令会将暂存区中的文件提交到本地仓库，并附带一条提交信息 `[commit message]` 。
 
-::alert{type="info"}
+::callout{color="info"}
 提交信息应该使用 `"` 引出并简洁明了，描述本次提交的内容。
 ::
 
@@ -78,7 +88,9 @@ navigation: false
 
 查看当前 *Git* 状态：
 
-:terminal{content="git status"}
+```bash
+git status
+```
 
 此命令会显示当前 *Git* 的状态，包括：
 
@@ -90,7 +102,9 @@ navigation: false
 
 查看提交历史：
 
-:terminal{content="git log"}
+```bash
+git log
+```
 
 此命令会显示当前 *Git* 仓库的提交历史，包括：
 
@@ -105,15 +119,17 @@ navigation: false
 
 返回上一版本：
 
-:terminal{content="git reset --hard HEAD^"}
+```bash
+git reset --hard HEAD^
+```
 
 此命令会将当前 *Git* 仓库的版本回退到上一版本。
 
-::alert{type="info"}
+::callout{color="info"}
 `HEAD^` 表示上一个版本，`HEAD^^` 表示上上一个版本，以此类推。
 ::
 
-::alert{type="warning"}
+::callout{color="warning"}
 此命令模式为 `hard` 时会将当前 *Git* 仓库的所有修改都清空。
 ::
 
@@ -122,10 +138,12 @@ navigation: false
 
 返回指定版本：
 
-:terminal{content="git reset --hard [commit id]"}
+```bash
+git reset --hard [commit id]
+```
 
 此命令会将当前 *Git* 仓库的版本回退到指定版本。
 
-::alert{type="info"}
+::callout{color="info"}
 `[commit id]` 为提交历史中的提交 ID。
 ::

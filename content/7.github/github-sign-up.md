@@ -7,11 +7,11 @@ navigation: false
 # GitHub 注册教程
 
 ## 准备工作
-::list{type="primary"}
+::callout{color="primary"}
 - 电子邮箱
 ::
 
-::list{type="info"}
+::callout{color="info"}
 - 访问加速工具（可选）
 ::
 

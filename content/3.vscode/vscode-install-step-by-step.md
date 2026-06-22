@@ -7,7 +7,7 @@ navigation: false
 
 # VSCode Installer 逐步安装指南
 
-::alert{type="info"}
+::callout{color="info"}
 以 *Windows* 下的 *User Installer* 为例
 ::
 

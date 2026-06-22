@@ -1,4 +1,16 @@
 export default defineAppConfig({
+  ui: {
+    prose: {
+      img: {
+        base: 'rounded-md max-w-full h-auto will-change-transform',
+        variants: {
+          width: {
+            false: 'max-w-full h-auto'
+          }
+        }
+      }
+    }
+  },
   docus: {
     title: 'Shift to Modern',
     description: 'The only guide you need to let your teammates adopt modern work flows and tools.',

@@ -1,3 +1,10 @@
 export default defineNuxtConfig({
-  extends: '@nuxt-themes/docus'
+  extends: 'docus',
+  css: ['~/assets/css/main.css'],
+  nitro: {
+    prerender: {
+      crawlLinks: false,
+      routes: ['/']
+    }
+  }
 })

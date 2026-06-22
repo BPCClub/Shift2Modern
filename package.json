@@ -3,13 +3,17 @@
   "version": "230713",
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "generate": "nuxi generate",
-    "preview": "nuxi preview"
+    "dev": "NUXT_TELEMETRY_DISABLED=1 nuxt dev --extends docus",
+    "build": "NUXT_TELEMETRY_DISABLED=1 NITRO_PRERENDER_CRAWL_LINKS=false nuxt build --extends docus",
+    "generate": "NUXT_TELEMETRY_DISABLED=1 NITRO_PRERENDER_CRAWL_LINKS=false nuxt generate --extends docus",
+    "preview": "NUXT_TELEMETRY_DISABLED=1 nuxt preview"
   },
   "devDependencies": {
-    "@nuxt-themes/docus": "^1.14.3",
-    "nuxt": "^3.6.2"
+    "@nuxt/kit": "^4.4.8",
+    "better-sqlite3": "^12.4.1",
+    "docus": "^5.12.2",
+    "nuxt": "^4.4.8",
+    "remark-emoji": "^5.0.2",
+    "unstorage": "^1.17.5"
   }
 }

@@ -18,11 +18,11 @@ navigation: false
 
 [快速入门指南](./github/github-desktop)，如果已在网页初始化仓库，可直接从 [#克隆仓库](./github/github-desktop#克隆仓库) 开始。也可直接使用 GitHub Desktop 创建仓库，参见 [#创建新仓库](./github/github-desktop#创建新仓库)。
 
-::alert{type="info"}
+::callout{color="info"}
 这个带章节的跳转跳不到章节，自己在右侧toc点一下吧
 ::
 
-::alert{type="danger"}
+::callout{color="error"}
 **在未确定导致 push 失败的原因前请勿 force push**
 ::
 
@@ -45,7 +45,7 @@ navigation: false
 
 Miniconda 基本能满足需求，[下载地址](https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links)。安装完后记得把 `[PATH_TO_CONDA]/condabin` 加入PATH。
 
-::alert{type="info"}
+::callout{color="info"}
 `[PATH_TO_CONDA]` 为 conda 安装路径，如 `C:\Users\username\miniconda3`。
 ::
 
