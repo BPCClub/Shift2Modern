@@ -1,0 +1,6 @@
+.prose img[data-nuxt-img],
+[data-content-id] img[data-nuxt-img] {
+  width: auto !important;
+  max-width: 100%;
+  height: auto;
+}

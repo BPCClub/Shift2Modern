@@ -7,7 +7,7 @@ navigation: false
 
 # GIt 逐步安装指南
 
-::alert{type="info"}
+::callout{color="info"}
 以 *Windows* 下的 *User Installer* 为例 :br
 :br
 本文撰写之日最新的 *Git* 版本为 :badge[2.39.2]{type="warning"}
@@ -43,11 +43,11 @@ navigation: false
 
 ![](/img/4/99/3.png)
 
-::alert{type="info"}
+::callout{color="info"}
 如按照本指南安装 *VSCode*，则此处应选择 `Use Visual Studio Code as Git's default editor`
 ::
 
-::alert{type="warning"}
+::callout{color="warning"}
 *Git* 同时支持将 *VSCode* 与 *VSCode Insiders* （*VSCode* 预览版）作为默认编辑器，请注意区分。
 ::
 
@@ -56,7 +56,7 @@ navigation: false
 
 ![](/img/4/99/4.png)
 
-::alert{type="info"}
+::callout{color="info"}
 *GitHub* 默认的初始分支名为 `main`，而 *Git* 默认的初始分支名为 `master`。
 建议如图操作
 ::
@@ -75,7 +75,7 @@ navigation: false
 
 ![](/img/4/99/6.png)
 
-::alert{type="info"}
+::callout{color="info"}
 *Windows* 自带了 *OpenSSH* 客户端，同时 *Git* 也自带了 *OpenSSH* 客户端。 :br
 选择 `Use external OpenSSH` 即可调用 *Windows* 自带的 *OpenSSH* 客户端。
 ::
@@ -144,7 +144,7 @@ IMPORTANT: You must submit files in the CVS directory with Unix/Linux file endin
 
 ![](/img/4/99/13.png)
 
-::alert{type="warning"}
+::callout{color="warning"}
 这些项目可能会频繁变更，生成环境不建议使用。
 ::
 
