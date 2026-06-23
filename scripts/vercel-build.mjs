@@ -1,47 +1,55 @@
-import { spawn } from 'node:child_process'
-import { readFileSync } from 'node:fs'
+import { spawn } from 'node:child_process';
+import { cp, mkdir, rm, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import extract from 'extract-zip';
 
-const startedAt = Date.now()
-const buildTimeoutMs = Number(process.env.SHIFT2MODERN_BUILD_TIMEOUT_MS ?? 180000)
-const child = spawn('pnpm', ['exec', 'nuxt', 'build'], {
-  stdio: 'inherit',
-  env: { ...process.env, SHIFT2MODERN_BUILD_PROBE: '1' },
-})
+const root = new URL('../', import.meta.url);
+const outputDir = new URL('.vercel/output/', root);
+const staticDir = new URL('static/', outputDir);
+const configPath = new URL('config.json', outputDir);
+const exportZip = new URL('export.zip', root);
 
-console.log(`[build-watch] node=${process.version} pid=${process.pid} child_pid=${child.pid ?? 'pending'}`)
+const run = (command, args) =>
+  new Promise((resolve, reject) => {
+    const child = spawn(command, args, {
+      cwd: fileURLToPath(root),
+      stdio: 'inherit',
+      shell: process.platform === 'win32',
+    });
 
-const interval = setInterval(() => {
-  const elapsedSeconds = Math.round((Date.now() - startedAt) / 1000)
-  const wrapperRssMb = Math.round(process.memoryUsage().rss / 1024 / 1024)
-  const childRssMb = child.pid ? readRssMb(child.pid) : null
-  const childRss = childRssMb === null ? 'unknown' : `${childRssMb}MB`
-  console.log(`[build-watch] elapsed=${elapsedSeconds}s wrapper_rss=${wrapperRssMb}MB child_rss=${childRss} child_pid=${child.pid ?? 'exited'}`)
-}, 10000)
+    child.on('error', reject);
+    child.on('exit', (code) => {
+      if (code === 0) {
+        resolve();
+        return;
+      }
 
-const timeout = setTimeout(() => {
-  const elapsedSeconds = Math.round((Date.now() - startedAt) / 1000)
-  console.error(`[build-watch] timeout after ${elapsedSeconds}s; stopping nuxt build`)
-  child.kill('SIGTERM')
-}, buildTimeoutMs)
+      reject(new Error(`${command} ${args.join(' ')} exited with code ${code}`));
+    });
+  });
 
-child.on('exit', (code, signal) => {
-  clearInterval(interval)
-  clearTimeout(timeout)
+await rm(outputDir, { recursive: true, force: true });
+await rm(exportZip, { force: true });
 
-  if (signal) {
-    console.error(`[build-watch] nuxt build exited by signal ${signal}`)
-    process.exit(1)
-  }
+await run('pnpm', ['exec', 'mint', 'export']);
 
-  process.exit(code ?? 1)
-})
+await mkdir(staticDir, { recursive: true });
+await extract(fileURLToPath(exportZip), { dir: fileURLToPath(staticDir) });
 
-function readRssMb(pid) {
-  try {
-    const status = readFileSync(`/proc/${pid}/status`, 'utf8')
-    const match = status.match(/^VmRSS:\s+(\d+)\s+kB$/m)
-    return match ? Math.round(Number(match[1]) / 1024) : null
-  } catch {
-    return null
-  }
-}
+await cp(new URL('public/', staticDir), staticDir, { recursive: true, force: true });
+await Promise.all(
+  [
+    '.codegraph',
+    '.gitignore',
+    '.npmrc',
+    'Start Docs.bat',
+    'Start Docs.command',
+    'public',
+    'scripts',
+    'serve.js',
+    'tokens.config.ts',
+  ].map((path) => rm(new URL(path, staticDir), { recursive: true, force: true })),
+);
+
+await writeFile(configPath, `${JSON.stringify({ version: 3 }, null, 2)}\n`);
+await rm(exportZip, { force: true });

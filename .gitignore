@@ -11,3 +11,5 @@ dist
 sw.*
 .env
 .output
+.vercel/output
+export.zip
