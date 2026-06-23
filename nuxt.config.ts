@@ -1,12 +1,12 @@
 // Docus enables its AI assistant automatically when Vercel injects OIDC.
 // This site does not use that feature, and the extra bundle path stalls Vercel builds.
 delete process.env.VERCEL_OIDC_TOKEN
-const isVercelBuild = process.env.VERCEL === '1'
+const isBuildProbeEnabled = process.env.SHIFT2MODERN_BUILD_PROBE === '1'
 const transformProbe = {
   name: 'shift2modern:transform-probe',
   apply: 'build',
   transform(_code: string, id: string) {
-    if (!isVercelBuild || this.environment.name !== 'client') {
+    if (!isBuildProbeEnabled || this.environment.name !== 'client') {
       return null
     }
 
@@ -23,7 +23,7 @@ let transformCount = 0
 const recentTransforms: string[] = []
 let transformProbeInterval: ReturnType<typeof setInterval> | undefined
 
-if (isVercelBuild) {
+if (isBuildProbeEnabled) {
   transformProbeInterval = setInterval(() => {
     console.log(`[vite-probe] client_transforms=${transformCount} recent=${recentTransforms.join(' | ')}`)
   }, 10000)

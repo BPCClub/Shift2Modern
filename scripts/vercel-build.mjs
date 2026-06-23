@@ -5,7 +5,7 @@ const startedAt = Date.now()
 const child = spawn('nuxt', ['build'], {
   stdio: 'inherit',
   shell: true,
-  env: process.env,
+  env: { ...process.env, SHIFT2MODERN_BUILD_PROBE: '1' },
 })
 
 console.log(`[build-watch] node=${process.version} pid=${process.pid} child_pid=${child.pid ?? 'pending'}`)
