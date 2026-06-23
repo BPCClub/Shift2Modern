@@ -3,10 +3,8 @@
   "version": "230713",
   "private": true,
   "scripts": {
-    "dev": "NUXT_TELEMETRY_DISABLED=1 nuxt dev --extends docus",
-    "build": "NUXT_TELEMETRY_DISABLED=1 NITRO_PRERENDER_CRAWL_LINKS=false nuxt build --extends docus",
-    "generate": "NUXT_TELEMETRY_DISABLED=1 NITRO_PRERENDER_CRAWL_LINKS=false nuxt generate --extends docus",
-    "preview": "NUXT_TELEMETRY_DISABLED=1 nuxt preview"
+    "dev": "nuxt dev",
+    "build": "nuxt build"
   },
   "devDependencies": {
     "@nuxt/kit": "^4.4.8",
