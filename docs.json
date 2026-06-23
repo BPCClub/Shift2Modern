@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Shift to Modern",
   "colors": {
-    "primary": "#16a34a",
-    "light": "#22c55e",
-    "dark": "#15803d"
+    "primary": "#171717",
+    "light": "#4d4d4d",
+    "dark": "#000000"
   },
   "favicon": "/favicon.ico",
   "logo": "/icon.png",
@@ -84,12 +84,6 @@
             "group": "正则表达式",
             "pages": [
               "regexp/introduction"
-            ]
-          },
-          {
-            "group": "附录",
-            "pages": [
-              "smart-qa"
             ]
           }
         ]

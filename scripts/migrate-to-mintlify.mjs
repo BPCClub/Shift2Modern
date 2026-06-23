@@ -72,7 +72,6 @@ const groups = [
   {
     group: '附录',
     pages: [
-      ['smart-qa', 'content/99.smart-qa.md'],
     ],
   },
 ]
@@ -314,7 +313,6 @@ function outputRoots() {
     'preface.mdx',
     'startup.mdx',
     'contribution-guidelines.mdx',
-    'smart-qa.mdx',
     'vscode',
     'git',
     'markdown',
