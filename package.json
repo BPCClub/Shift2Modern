@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "mint dev",
-    "build": "mint validate",
+    "build": "node scripts/vercel-build.mjs",
     "validate": "mint validate",
     "export": "mint export"
   },
   "devDependencies": {
+    "extract-zip": "^2.0.1",
     "mint": "^4.2.635"
   },
   "engines": {
