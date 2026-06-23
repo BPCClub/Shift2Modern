@@ -14,5 +14,8 @@
     "remark-emoji": "^5.0.2",
     "unstorage": "^1.17.5"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "packageManager": "pnpm@11.8.0"
 }
