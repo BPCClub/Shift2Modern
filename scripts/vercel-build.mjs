@@ -2,9 +2,9 @@ import { spawn } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 
 const startedAt = Date.now()
-const child = spawn('nuxt', ['build'], {
+const buildTimeoutMs = Number(process.env.SHIFT2MODERN_BUILD_TIMEOUT_MS ?? 180000)
+const child = spawn('pnpm', ['exec', 'nuxt', 'build'], {
   stdio: 'inherit',
-  shell: true,
   env: { ...process.env, SHIFT2MODERN_BUILD_PROBE: '1' },
 })
 
@@ -18,8 +18,15 @@ const interval = setInterval(() => {
   console.log(`[build-watch] elapsed=${elapsedSeconds}s wrapper_rss=${wrapperRssMb}MB child_rss=${childRss} child_pid=${child.pid ?? 'exited'}`)
 }, 10000)
 
+const timeout = setTimeout(() => {
+  const elapsedSeconds = Math.round((Date.now() - startedAt) / 1000)
+  console.error(`[build-watch] timeout after ${elapsedSeconds}s; stopping nuxt build`)
+  child.kill('SIGTERM')
+}, buildTimeoutMs)
+
 child.on('exit', (code, signal) => {
   clearInterval(interval)
+  clearTimeout(timeout)
 
   if (signal) {
     console.error(`[build-watch] nuxt build exited by signal ${signal}`)

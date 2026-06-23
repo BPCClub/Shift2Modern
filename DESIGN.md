@@ -28,7 +28,8 @@ Shift2Modern is a documentation site for teaching modern development workflows. 
 ## Interaction
 
 - Links remain real anchors.
-- Header search, mobile navigation, color mode, and generated docs navigation remain owned by Docus.
+- Mobile navigation, color mode, and generated docs navigation remain owned by Docus.
+- Header search is intentionally disabled until Docus/Nuxt Content search builds reliably on Vercel.
 - Compatibility components must not intercept clicks unless they render explicit links.
 
 ## Accessibility
