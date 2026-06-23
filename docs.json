@@ -1,0 +1,104 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Shift to Modern",
+  "colors": {
+    "primary": "#16a34a",
+    "light": "#22c55e",
+    "dark": "#15803d"
+  },
+  "favicon": "/favicon.ico",
+  "logo": "/icon.png",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "指南",
+        "groups": [
+          {
+            "group": "首页",
+            "pages": [
+              "index"
+            ]
+          },
+          {
+            "group": "开始",
+            "pages": [
+              "preface",
+              "startup",
+              "contribution-guidelines"
+            ]
+          },
+          {
+            "group": "VSCode",
+            "pages": [
+              "vscode/introduction",
+              "vscode/download-and-install",
+              "vscode/basic-operation",
+              "vscode/install-step-by-step"
+            ]
+          },
+          {
+            "group": "Git",
+            "pages": [
+              "git/introduction",
+              "git/download-and-install",
+              "git/basic-concept",
+              "git/reference",
+              "git/advanced-operation",
+              "git/basic-operation",
+              "git/install-step-by-step"
+            ]
+          },
+          {
+            "group": "Markdown",
+            "pages": [
+              "markdown/introduction",
+              "markdown/basic-grammar",
+              "markdown/extra-grammar",
+              "markdown/cheat-sheet"
+            ]
+          },
+          {
+            "group": "Terminal",
+            "pages": [
+              "terminal/introduction",
+              "terminal/cli"
+            ]
+          },
+          {
+            "group": "GitHub",
+            "pages": [
+              "github/introduction",
+              "github/desktop",
+              "github/sign-up"
+            ]
+          },
+          {
+            "group": "Mindmap",
+            "pages": [
+              "mindmap/introduction",
+              "mindmap/recommended-softwares"
+            ]
+          },
+          {
+            "group": "正则表达式",
+            "pages": [
+              "regexp/introduction"
+            ]
+          },
+          {
+            "group": "附录",
+            "pages": [
+              "smart-qa"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/BPCClub/Shift2Modern"
+    }
+  }
+}
