@@ -15,7 +15,7 @@
     "unstorage": "^1.17.5"
   },
   "engines": {
-    "node": "22.x"
+    "node": "24.x"
   },
   "packageManager": "pnpm@11.8.0"
 }
