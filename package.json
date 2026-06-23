@@ -3,16 +3,17 @@
   "version": "230713",
   "private": true,
   "scripts": {
-    "dev": "nuxt dev",
-    "build": "nuxt build"
+    "dev": "mint dev",
+    "build": "node scripts/vercel-build.mjs",
+    "validate": "mint validate",
+    "export": "mint export"
   },
   "devDependencies": {
-    "@nuxt/kit": "^4.4.8",
-    "better-sqlite3": "^12.11.1",
-    "docus": "^5.12.2",
-    "nuxt": "^4.4.8",
-    "remark-emoji": "^5.0.2",
-    "unstorage": "^1.17.5"
+    "extract-zip": "^2.0.1",
+    "mint": "^4.2.635"
+  },
+  "engines": {
+    "node": "22.x"
   },
   "packageManager": "pnpm@11.8.0"
 }

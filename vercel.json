@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "name": "shift2modern",
+  "buildCommand": "pnpm run build",
+  "installCommand": "pnpm install",
+  "framework": null
+}

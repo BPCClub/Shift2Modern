@@ -1,6 +1,19 @@
+onlyBuiltDependencies:
+  - sharp
+ignoredBuiltDependencies:
+  - keytar
+  - puppeteer
 allowBuilds:
-  '@parcel/watcher': true
-  better-sqlite3: true
-  esbuild: true
+  keytar: false
+  puppeteer: false
   sharp: true
-  vue-demi: true
+minimumReleaseAgeExclude:
+  - '@mintlify/cli@4.0.1238'
+  - '@mintlify/common@1.0.955'
+  - '@mintlify/link-rot@3.0.1141'
+  - '@mintlify/models@0.0.326'
+  - '@mintlify/prebuild@1.0.1101'
+  - '@mintlify/previewing@4.0.1166'
+  - '@mintlify/scraping@4.0.819'
+  - '@mintlify/validation@0.1.748'
+  - mint@4.2.635
