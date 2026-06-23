@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
-    "build": "nuxt build"
+    "build": "node scripts/vercel-build.mjs"
   },
   "devDependencies": {
     "@nuxt/kit": "^4.4.8",
