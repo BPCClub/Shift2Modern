@@ -1,6 +1,7 @@
+<p align="center">
+  <img src="logo.png" alt="Shift to Modern logo" width="160">
+</p>
+
 # BPCC Guide
 
 Check out <https://shift2modern.dev> for more information.
-
-## Stargazers over time
-[![Stargazers over time](https://starchart.cc/BPCClub/Shift2Modern.svg?variant=adaptive)](https://starchart.cc/BPCClub/Shift2Modern)
