@@ -41,6 +41,15 @@ function pagePathToMarkdownPath(pagePath) {
   return pagePath === 'index' ? 'index.md' : `${pagePath}.md`;
 }
 
+function pagePathToMarkdownPaths(pagePath) {
+  const paths = [pagePathToMarkdownPath(pagePath)];
+  if (pagePath === 'index') {
+    paths.push('.md');
+  }
+
+  return paths;
+}
+
 function absoluteUrl(path) {
   return new URL(path, siteUrl).toString();
 }
@@ -129,7 +138,9 @@ export async function generateAiStaticFiles(staticDirUrl = defaultStaticDir) {
   const pages = await Promise.all(collectPages(config).map(readPage));
 
   await Promise.all(
-    pages.map((page) => writeTextFile(staticDir, pagePathToMarkdownPath(page.path), page.source)),
+    pages.flatMap((page) =>
+      pagePathToMarkdownPaths(page.path).map((path) => writeTextFile(staticDir, path, page.source)),
+    ),
   );
 
   const llmsTxt = buildLlmsTxt(config, pages);
