@@ -2,6 +2,7 @@ import { spawn } from 'node:child_process';
 import { cp, mkdir, rm, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import extract from 'extract-zip';
+import { generateAiStaticFiles } from './generate-ai-static.mjs';
 
 const root = new URL('../', import.meta.url);
 const outputDir = new URL('.vercel/output/', root);
@@ -35,6 +36,7 @@ await run('pnpm', ['exec', 'mint', 'export']);
 
 await mkdir(staticDir, { recursive: true });
 await extract(fileURLToPath(exportZip), { dir: fileURLToPath(staticDir) });
+await generateAiStaticFiles(staticDir);
 
 await cp(new URL('public/', staticDir), staticDir, { recursive: true, force: true });
 await Promise.all(
