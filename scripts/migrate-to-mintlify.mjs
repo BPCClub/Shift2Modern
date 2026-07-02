@@ -92,6 +92,7 @@ writeFileSync('docs.json', `${JSON.stringify({
   $schema: 'https://mintlify.com/docs.json',
   theme: 'mint',
   name: 'Shift to Modern',
+  description: 'Shift to Modern 是一份面向初学者的中文现代开发工作流教程，涵盖 VSCode、Git、GitHub、Markdown、终端、思维导图和正则表达式等工具。',
   colors: {
     primary: '#16a34a',
     light: '#22c55e',
@@ -101,6 +102,17 @@ writeFileSync('docs.json', `${JSON.stringify({
   logo: {
     light: '/logo-light.svg',
     dark: '/logo-dark.svg',
+  },
+  contextual: {
+    options: ['copy', 'view', 'chatgpt', 'claude', 'perplexity', 'grok', 'aistudio'],
+  },
+  seo: {
+    indexing: 'navigable',
+    metatags: {
+      'og:site_name': 'Shift to Modern',
+      'og:locale': 'zh_CN',
+      'twitter:card': 'summary',
+    },
   },
   navigation: {
     tabs: [
